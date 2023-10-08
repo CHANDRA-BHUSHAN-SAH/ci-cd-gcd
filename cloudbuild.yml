@@ -1,0 +1,12 @@
+steps:
+- name: 'grc-io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - function-cicd
+  - --region=us-central1
+  - --source=.
+  - --trigger-http
+  - --runtime=nodejs18
+  - --entry-point=helloWorld
